@@ -26,7 +26,7 @@ const PersonnelCategories = () => {
                         transition={{ delay: 0.1 }}
                         className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
                     >
-                        โครงสร้างองค์กร
+                        ข้อมูลครูและบุคลากรทางการศึกษา
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -35,7 +35,7 @@ const PersonnelCategories = () => {
                         transition={{ delay: 0.2 }}
                         className="text-gray-500 max-w-2xl mx-auto"
                     >
-                        รู้จักกับทีมงานคุณภาพกว่า 20 ท่าน ผู้อยู่เบื้องหลังความสำเร็จและการพัฒนาองค์กรอย่างยั่งยืน
+                        ทำความรู้จักกับครูและบุคลากร 16 ท่าน ผู้อยู่เบื้องหลังความสำเร็จของโรงเรียนบ้านบาตร(ชัยทัตราษฎร์บำรุง)
                     </motion.p>
                 </div>
 
