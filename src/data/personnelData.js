@@ -1,0 +1,25 @@
+export const director = {
+    id: 1,
+    name: "นายดุสิต หลอมประโคน",
+    role: "ผู้อำนวยการโรงเรียน",
+    number: "081-xxxxxxx",
+    image: "/ผอ.png",
+};
+
+export const personnel = [
+    { id: 2, name: "นางสุวรรณี อินทร์ประโคน", role: "ครู",number: "098-xxxxxxx", image: "/บุคลากร/ครูจุ๊_พื้นหลังชมพู.png" },
+    { id: 3, name: "นางอริสา ราชประโคน", role: "ครู",number: "098-xxxxxxx", image: "/บุคลากร/ครูไก่_พื้นหลังชมพู.png" },
+    { id: 4, name: "นายอนุ หิงประโคน ", role: "ครู",number: "098-xxxxxxx", image: "/บุคลากร/.png" },
+    { id: 5, name: "นางพร้อมศรี ทวันเวช", role: "ครู",number: "098-xxxxxxx", image: "/บุคลากร/ครูเหนียง_พื้นหลังชมพู.png" },
+    { id: 6, name: "นางจารุวรรณ บาลโสง", role: "ครู",number: "098-xxxxxxx", image: "/บุคลากร/ครูนุ้ย_พื้นหลังชมพู.png" },
+    { id: 7, name: "นางสาวนิศากร สุดประโคน", role: "ครู",number: "098-xxxxxxx", image: "/บุคลากร/ครูปู_พื้นหลังชมพู.png" },
+    { id: 8, name: "นางสาวสุพัฒตรา จันทร์รุกขา", role: "ครู",number: "098-xxxxxxx", image: "/บุคลากร/ครูไทน์_พื้นหลังชมพู.png" },
+    { id: 9, name: "นางสาวศริวรรณ สอประโคน", role: "ครูผู้ช่วย",number: "098-xxxxxxx", image: "/บุคลากร/ครูเกม_พื้นหลังชมพู.png" },
+    { id: 10, name: "นางสาวแก้วลัดดา ยอดคำมี", role: "ครูผู้ช่วย",number: "098-xxxxxxx", image: "/บุคลากร/ครูแก้ว_พื้นหลังชมพู.png" },
+    { id: 11, name: "นางสาวนภัสสร ฉิมกูล", role: "ครูผู้ช่วย",number: "098-xxxxxxx", image: "/บุคลากร/ครูภัส_พื้นหลังชมพู.png" },
+    { id: 12, name: "นางธนัชชา คิดรัมย์", role: "พนักงานราชการ",number: "098-xxxxxxx", image: "/บุคลากร/ครูแดง.jpg" },
+    { id: 13, name: "ครูว่าน", role: "***",number: "098-xxxxxxx", image: "/บุคลากร/.png" },
+    { id: 14, name: "ครูกิ๊ก", role: "***",number: "098-xxxxxxx", image: "/บุคลากร/.png" },
+    { id: 15, name: "นางสาววิไลวรรณ เรียกประโคน", role: "ธุรการ",number: "098-xxxxxxx", image: "/บุคลากร/ครูตื๊ก_พื้นหลังชมพู.png" },
+    { id: 16, name: "นางมานพ มิตรแสง", role: "นักการภารโรง",number: "098-xxxxxxx", image: "/บุคลากร/ป้านพ_พื้นหลังชมพู.png" },
+];
