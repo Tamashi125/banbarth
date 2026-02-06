@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { X, Calendar, ImageIcon } from 'lucide-react';
 
 const NewsModal = ({ item, onClose }) => {
+    const [selectedImage, setSelectedImage] = useState(null);
+
     if (!item) return null;
 
     return (
@@ -55,12 +57,21 @@ const NewsModal = ({ item, onClose }) => {
                             </h3>
                             <div className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
                                 {item.gallery.map((img, idx) => (
-                                    <div key={idx} className="break-inside-avoid rounded-xl overflow-hidden mb-4 relative group">
+                                    <div
+                                        key={idx}
+                                        className="break-inside-avoid rounded-xl overflow-hidden mb-4 relative group cursor-pointer"
+                                        onClick={() => setSelectedImage(img)}
+                                    >
                                         <img
                                             src={img}
                                             alt={`Gallery ${idx + 1}`}
                                             className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
                                         />
+                                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                                            <div className="bg-white/90 p-2 rounded-full shadow-lg transform scale-75 group-hover:scale-100 transition-all duration-300">
+                                                <ImageIcon size={20} className="text-gray-700" />
+                                            </div>
+                                        </div>
                                     </div>
                                 ))}
                             </div>
@@ -68,6 +79,27 @@ const NewsModal = ({ item, onClose }) => {
                     )}
                 </div>
             </div>
+
+            {/* Lightbox Overlay */}
+            {selectedImage && (
+                <div
+                    className="fixed inset-0 z-[70] flex items-center justify-center bg-black/95 backdrop-blur-md p-4 animate-in fade-in duration-200"
+                    onClick={() => setSelectedImage(null)}
+                >
+                    <button
+                        className="absolute top-4 right-4 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-2 rounded-full transition-all"
+                        onClick={() => setSelectedImage(null)}
+                    >
+                        <X size={32} />
+                    </button>
+                    <img
+                        src={selectedImage}
+                        alt="Full screen"
+                        className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl animate-in zoom-in-95 duration-300"
+                        onClick={(e) => e.stopPropagation()}
+                    />
+                </div>
+            )}
         </div>
     );
 };
