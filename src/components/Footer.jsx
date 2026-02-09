@@ -41,7 +41,7 @@ const Footer = () => {
                         <h4 className="font-bold text-gray-900 mb-4">ติดต่อเรา</h4>
                         <ul className="space-y-2 text-sm text-gray-500">
                             <li>โทร: 081-266-5104</li>
-                            <li>อีเมล: banbarthschoo@gmail.com</li>
+                            <li>อีเมล: banbarths@gmail.com</li>
                             <li>Facebook: โรงเรียนบ้านบาตร(ชัยทัตราษฎร์บำรุง)</li>
                         </ul>
                     </div>
