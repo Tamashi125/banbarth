@@ -47,7 +47,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-sm text-gray-400">ลิขสิทธิ์ © 2025 โรงเรียนบ้านบาตร(ชัยทัตราษฎร์บํารุง).</p>
+                    <p className="text-sm text-gray-400">ลิขสิทธิ์ © 2025 โรงเรียนบ้านบาตร (ชัยทัตราษฎร์บํารุง).</p>
                 </div>
             </div>
         </footer>

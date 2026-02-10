@@ -23,7 +23,7 @@ const Navbar = ({ scrolled, onMenuClick }) => {
                         </div>
                         <span className={`font-bold text-lg md:text-xl tracking-tight transition-colors ${scrolled ? 'text-gray-800' : 'text-white'
                             }`}>
-                            โรงเรียนบ้านบาตร<span className={`${scrolled ? 'text-pink-500' : 'text-pink-200'} hidden md:inline`}>{'(ชัยทัตราษฎร์บํารุง)'}</span>
+                            โรงเรียนบ้านบาตร<span className={`${scrolled ? 'text-pink-500' : 'text-pink-200'} hidden md:inline`}>{' (ชัยทัตราษฎร์บํารุง)'}</span>
                         </span>
                     </div>
 
