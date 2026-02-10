@@ -33,16 +33,16 @@ const PersonnelCard = ({ person, isDirector = false }) => (
             </p>
 
             {/* Moved Contact Icons Here with Text */}
-            <div className="flex flex-col gap-1.5 pt-2 border-t border-gray-100/50">
-                {/* <div className="flex items-center justify-center gap-1.5 text-[10px] md:text-xs text-gray-400 group-hover:text-pink-500 transition-colors">
+            {/* <div className="flex flex-col gap-1.5 pt-2 border-t border-gray-100/50">
+                <div className="flex items-center justify-center gap-1.5 text-[10px] md:text-xs text-gray-400 group-hover:text-pink-500 transition-colors">
                     <Mail size={12} className="flex-shrink-0" />
                     <span className="truncate">test@gmail.com</span>
-                </div> */}
+                </div>
                 <div className="flex items-center justify-center gap-1.5 text-[10px] md:text-xs text-gray-400 group-hover:text-pink-500 transition-colors">
                     <Phone size={12} className="flex-shrink-0" />
                     <span>{person.number}</span>
                 </div>
-            </div>
+            </div> */}
         </div>
     </motion.div>
 );
