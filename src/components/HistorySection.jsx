@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, Quote } from 'lucide-react';
+import { Award, Quote, Star } from 'lucide-react';
 
 const HistorySection = () => {
     return (
@@ -65,6 +65,12 @@ const HistorySection = () => {
                                 จึงได้เปลี่ยนแปลงตามลำดับต่อไปนี้ เปลี่ยนแปลงจากการสอน ภาคบังคับ 4 ปี มาเป็น 6 ปี ในปีการศึกษา
                                 2521 และ 2522
                             </p>
+                        </div>
+
+
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-50 border border-pink-100 text-pink-600 text-sm font-medium mb-6">
+                            <Star size={16} />
+                            <span>คําขวัญโรงเรียน</span>
                         </div>
 
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
