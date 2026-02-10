@@ -30,7 +30,7 @@ const HistorySection = () => {
                         {/* ย้ายชื่อมาไว้ด้านล่างรูปภาพ (แก้ไขกลับเป็นชื่อและตำแหน่ง) */}
                         <div className="mt-6 text-center relative z-10">
                             <h3 className="text-2xl font-bold text-gray-900">นายดุสิต หลอมประโคน</h3>
-                            <p className="text-pink-500 font-medium">ผู้อํานวยการโรงเรียนบ้านบาตร(ชัยทัตราษฎร์บํารุง)</p>
+                            <p className="text-pink-500 font-medium">ผู้อํานวยการโรงเรียนบ้านบาตร (ชัยทัตราษฎร์บํารุง)</p>
                         </div>
 
                         {/* Decorative Elements */}
@@ -48,7 +48,7 @@ const HistorySection = () => {
                     >
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-50 border border-pink-100 text-pink-600 text-sm font-medium mb-6">
                             <Award size={16} />
-                            <span>ประวัติความเป็นมาของโรงเรียนบ้านบาตร(ชัยทัตราษฎร์บํารุง)</span>
+                            <span>ประวัติความเป็นมาของโรงเรียนบ้านบาตร (ชัยทัตราษฎร์บํารุง)</span>
                         </div>
 
                         <div className="relative">
