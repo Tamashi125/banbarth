@@ -42,7 +42,7 @@ const Footer = () => {
                         <ul className="space-y-2 text-sm text-gray-500">
                             <li>โทร: 081-266-5104</li>
                             <li>อีเมล: banbarths@gmail.com</li>
-                            <li>Facebook: โรงเรียนบ้านบาตร(ชัยทัตราษฎร์บำรุง)</li>
+                            <li>Facebook:  <a target="_blank" href="https://www.facebook.com/BanbartSchool">โรงเรียนบ้านบาตร(ชัยทัตราษฎร์บำรุง)</a></li> 
                         </ul>
                     </div>
                 </div>
