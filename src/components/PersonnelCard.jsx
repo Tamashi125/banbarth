@@ -2,13 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone } from 'lucide-react';
 
-const PersonnelCard = ({ person, isDirector = false }) => (
+const PersonnelCard = ({ person, isDirector = false, onClick }) => (
     <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         whileHover={{ y: -5 }}
-        className={`bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group h-full border ${isDirector ? 'border-pink-200 ring-4 ring-pink-50 shadow-xl' : 'border-gray-100'}`}
+        onClick={onClick}
+        className={`bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group h-full border ${isDirector ? 'border-pink-200 ring-4 ring-pink-50 shadow-xl' : 'border-gray-100'} ${onClick ? 'cursor-pointer' : ''}`}
     >
         <div className={`overflow-hidden relative ${isDirector ? 'aspect-[4/5]' : 'aspect-square'}`}>
             <img

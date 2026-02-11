@@ -1,12 +1,14 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Users } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Users, X } from 'lucide-react';
 import PersonnelCard from './PersonnelCard';
 import { director, personnel } from '../data/personnelData';
 
 const PersonnelCategories = () => {
+    const [selectedImage, setSelectedImage] = useState(null);
+
     return (
-        <div id="personnel" className="py-20 bg-gradient-to-b from-white to-pink-50">
+        <div id="personnel" className="py-20 bg-gradient-to-b from-white to-pink-50 relative">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <motion.div
@@ -45,7 +47,11 @@ const PersonnelCategories = () => {
                     {/* Level 1: Director (Slightly Larger) */}
                     <div className="w-full flex justify-center relative z-10">
                         <div className="w-64 transform hover:scale-105 transition-transform duration-500">
-                            <PersonnelCard person={director} isDirector={true} />
+                            <PersonnelCard
+                                person={director}
+                                isDirector={true}
+                                onClick={() => setSelectedImage(director.image)}
+                            />
                         </div>
                     </div>
 
@@ -56,13 +62,49 @@ const PersonnelCategories = () => {
                     <div className="w-full">
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
                             {personnel.map((person) => (
-                                <PersonnelCard key={person.id} person={person} />
+                                <PersonnelCard
+                                    key={person.id}
+                                    person={person}
+                                    onClick={() => setSelectedImage(person.image)}
+                                />
                             ))}
                         </div>
                     </div>
                 </div>
-
             </div>
+
+            {/* Image Modal */}
+            <AnimatePresence>
+                {selectedImage && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setSelectedImage(null)}
+                        className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.9, opacity: 0 }}
+                            className="relative max-w-4xl max-h-[90vh] w-auto h-auto bg-white rounded-2xl overflow-hidden shadow-2xl"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <button
+                                onClick={() => setSelectedImage(null)}
+                                className="absolute top-4 right-4 z-10 p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors backdrop-blur-md"
+                            >
+                                <X size={24} />
+                            </button>
+                            <img
+                                src={selectedImage}
+                                alt="Enlarged view"
+                                className="w-full h-full object-contain max-h-[85vh]"
+                            />
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 };
