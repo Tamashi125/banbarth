@@ -8,6 +8,7 @@ import NewsCard from './components/NewsCard';
 import NewsModal from './components/NewsModal';
 import PersonnelCategories from './components/PersonnelCategories';
 import Footer from './components/Footer';
+import NewsTicker from './components/NewsTicker';
 import { newsData } from './data/newsData';
 
 const App = () => {
@@ -45,6 +46,9 @@ const App = () => {
 
         {/* History Section Added Here */}
         <HistorySection />
+
+        {/* NewsTicker Component */}
+        <NewsTicker />
 
         <div id="news" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
