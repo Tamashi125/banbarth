@@ -5,6 +5,8 @@ import { newsTickerItems as newsItems } from '../data/newsTickerData';
 
 const NewsTicker = () => {
 
+    if (!newsItems || newsItems.length === 0) return null;
+
     return (
         <div className="bg-pink-600 text-white py-2 overflow-hidden relative z-20 border-b border-pink-700 shadow-inner">
             <div className="max-w-7xl mx-auto flex items-center px-4 sm:px-6 lg:px-8">
