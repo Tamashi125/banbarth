@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Bell, Calendar, ChevronRight } from 'lucide-react';
 
-const NewsCard = ({ item, featured, onReadMore }) => {
+const NewsCard = ({ item, featured, priority, onReadMore }) => {
     return (
         <motion.div
             layoutId={`card-${item.id}`}
@@ -20,6 +20,8 @@ const NewsCard = ({ item, featured, onReadMore }) => {
                             src={item.coverImage}
                             alt={item.title}
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            fetchPriority={priority ? "high" : "auto"}
+                            loading={priority ? "eager" : "lazy"}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60"></div>
                     </>

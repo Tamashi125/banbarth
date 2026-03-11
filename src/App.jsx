@@ -76,6 +76,7 @@ const App = () => {
                   key={item.id}
                   item={item}
                   featured={index === 0 && !searchTerm && !isExpanded} // แสดงFeatured เฉพาะตอนยังไม่ค้นหาและยังไม่กดดูทั้งหมด
+                  priority={index === 0}
                   onReadMore={setSelectedNews}
                 />
               ))

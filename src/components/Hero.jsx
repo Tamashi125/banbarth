@@ -9,6 +9,8 @@ const Hero = () => {
                     src="/bg1.png"
                     alt="Background"
                     className="w-full h-full object-cover"
+                    fetchPriority="high"
+                    loading="eager"
                 />
                 <div className="absolute inset-0 bg-black/30"></div>
             </div>
